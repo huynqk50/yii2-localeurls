@@ -290,9 +290,10 @@ class UrlManager extends BaseUrlManager
                         // /base/ -> /base
                         // /index.php/ -> /index.php
                         // /base/index.php/ -> /base/index.php
-                        if ($url === $prefix . '/') {
-                            $url = rtrim($url, '/');
-                        }
+                        // comment this to get root locale url with suffix
+//                         if ($url === $prefix . '/') {
+//                             $url = rtrim($url, '/');
+//                         }
                     } elseif (strncmp($url, $prefix . '/?', $insertPos + 2) === 0) {
                         // /?x=y -> ?x=y
                         // /base/?x=y -> /base?x=y
